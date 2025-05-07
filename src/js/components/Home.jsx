@@ -37,11 +37,9 @@ const Home = () => {
 					getAllTask()
 					setTask(initialStateTask)
 				}
-
 			} catch (error) {
 				console.log(error)
 			}
-
 		}
 	}
 
@@ -54,7 +52,6 @@ const Home = () => {
 				getAllTask()
 			}
 		} catch (error) {
-
 		}
 	}
 
@@ -63,6 +60,9 @@ const Home = () => {
 			const response = await fetch(`${urlBase}/users/Javiera`, {
 				method: "POST",
 			})
+			if (response.ok) {
+				getAllTask()
+			}
 
 		} catch (error) {
 		}
@@ -89,7 +89,6 @@ const Home = () => {
 		getAllTask()
 	}, [])
 
-
 	const deleteAllTask = async () => {
 		try {
 			const response = await fetch(`${urlBase}/users/Javiera`, {
@@ -97,15 +96,13 @@ const Home = () => {
 			})
 
 			if (response.ok) {
-				setListTask([])
+				getAllTask()
 
 			} else {
 				console.log("error al eliminar")
 			}
 		} catch (error) {
-
 		}
-
 	}
 
 	return (
@@ -150,11 +147,10 @@ const Home = () => {
 			</div>
 			<div
 				className="button-cont">
-
 				<button
 					type="button"
 					className="btn btn-outline-secondary"
-					onClick={() => deleteAllTask(getAllTask)}> Delete All Task
+					onClick={() => deleteAllTask(getAllTask)}> Borrar tareas
 				</button>
 			</div>
 		</div>

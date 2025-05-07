@@ -1,11 +1,74 @@
-/* 
+.container {
+    background-color: rgb(252, 248, 248);
+    height: 500px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.title {
+    font-size: 100px;
+    color: rgb(245, 199, 199);
+    font-weight: 100;
+}
 
-*/
+.list-task {
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+
+.form-task {
+    border: none;
+    border-bottom: 1px solid rgb(221, 220, 220);
+    ;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.added-tasks {
+    border-bottom: 1px solid rgb(221, 220, 220);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+ul {
+    list-style: none;
+    padding: 10px;
+
+}
+
+.text-body {
+    font-size: 10px;
+    padding-left: 0px;
+}
+
+.click {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(248, 176, 176);
+    font-size: 20px;
+    padding: 10px;
+    opacity: 0;
+
+}
+
+.click:hover {
+    opacity: 1;
+}
+
+.box {
+    box-shadow: 1px 18px 25px -19px rgba(0, 0, 0, 0.38);
+}
+.button-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
